@@ -47,11 +47,12 @@
 <body>
 <main>
   <h1>Food Intake — Privacy Policy</h1>
-  <p class="updated">Last updated 6 October 2026</p>
+  <p class="updated">Last updated 8 October 2026</p>
 
   <p class="lead">Food Intake is a personal nutrition log. This policy says exactly what happens
-  to your information. It is short because the app collects very little, and nothing at all for
-  advertising or analytics.</p>
+  to your information. The short version: your food log and your Apple Health data stay with
+  you, meal photos are sent away to be analysed, and nothing anywhere is used for advertising
+  or analytics.</p>
 
   <h2>What never leaves your device</h2>
 
@@ -87,11 +88,29 @@
     run by the developer, which forwards it to Anthropic so you do not need your own key.</li>
   </ul>
   <div class="card">
-    <p>The proxy <strong>does not store, log or retain your photos or notes</strong>. It passes
-    them straight through and keeps only the account and usage records described below.</p>
+    <p><strong>When you are signed in, the proxy keeps a copy of the photo and the note you
+    typed with it, for 45 days.</strong> After that both are deleted automatically.</p>
+    <p>This exists for one reason: when an estimate comes back wrong, the only way to
+    understand why is to see what the model was actually looking at. The photos are held in
+    private, encrypted storage that is not reachable from the web, and only the developer can
+    view them, through a page that asks for a signed link one photo at a time.</p>
+    <p>If you use your own Anthropic API key instead, the proxy is not involved at all and
+    nothing is kept.</p>
   </div>
   <p>Anthropic processes the photo in order to produce the estimate. See
   <a href="https://www.anthropic.com/legal/privacy">Anthropic's Privacy Policy</a>.</p>
+
+  <h3>A record of each analysis (only if you use the shared service)</h3>
+  <p>Alongside the photo, each analysis is recorded for the same 45 days:</p>
+  <ul>
+    <li>when it ran, and which model answered;</li>
+    <li>the note you typed and the text sent with the photo;</li>
+    <li>the food the model identified;</li>
+    <li>what it cost, and how many tokens it used;</li>
+    <li>whether it succeeded or failed.</li>
+  </ul>
+  <p>These are used to keep the shared service working and inside its budget, and to improve
+  the app's estimates. They are never used for advertising and never shared with anyone.
 
   <h3>Sign in with Apple (only if you use the shared service)</h3>
   <p>If you sign in rather than supplying your own API key, the proxy stores:</p>
@@ -127,9 +146,12 @@
     the app and remove its iCloud data in <em>Settings → Apple Account → iCloud → Manage Storage</em>.</li>
     <li><strong>Apple Health access:</strong> revoke it in <em>Settings → Privacy &amp; Security →
     Health → Food Intake</em>. Nothing was stored, so nothing needs deleting.</li>
+    <li><strong>Stored photos and analysis records:</strong> these delete themselves after 45
+    days. To have them removed sooner, email the address below.</li>
     <li><strong>Your shared-service account:</strong> email the address below and the account,
-    its name, email and usage records will be deleted. Revoking the app in
-    <em>Settings → Apple Account → Sign in with Apple</em> also stops it being used.</li>
+    its name, email, usage records, stored photos and analysis records will all be deleted.
+    Revoking the app in <em>Settings → Apple Account → Sign in with Apple</em> also stops it
+    being used.</li>
   </ul>
 
   <h2>Children</h2>
